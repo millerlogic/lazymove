@@ -17,9 +17,9 @@ func run() error {
 		MinDirAge:  lazymove.DefaultMinDirAge,
 	}
 
-	flag.DurationVar(&m.Timeout, "Timeout", m.Timeout, "How often to look for files to move")
-	flag.DurationVar(&m.MinFileAge, "MinFileAge", m.MinFileAge, "Minimum age to move files")
-	flag.DurationVar(&m.MinDirAge, "MinDirAge", m.MinDirAge, "Minimum age to remove empty dirs")
+	flag.DurationVar(&m.Timeout, "timeout", m.Timeout, "How often to look for files to move")
+	flag.DurationVar(&m.MinFileAge, "minFileAge", m.MinFileAge, "Minimum age to move files")
+	flag.DurationVar(&m.MinDirAge, "minDirAge", m.MinDirAge, "Minimum age to remove empty dirs")
 
 	flag.Usage = func() {
 		fmt.Fprintf(flag.CommandLine.Output(), "Usage: %s [Options...] <SourceDir> <DestDir>\nOptions:\n", os.Args[0])
